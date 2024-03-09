@@ -20,19 +20,6 @@ public class CharacterOutfitHandler : MonoBehaviour
     private GameObject _currentTop;
     private GameObject _currentBottom;
     
-    private void Start()
-    {
-        SetInitialOutfits();
-    }
-
-    private void SetInitialOutfits()
-    {
-        SetOutfit(bottomOutfit);
-        SetOutfit(topOutfit);
-        SetOutfit(hairOutfit);
-        SetOutfit(hatOutfit);
-    }
-    
     #region Outfit setters
 
     //Base setter
@@ -130,4 +117,27 @@ public class CharacterOutfitHandler : MonoBehaviour
     }
     
     #endregion
+
+    public void ClearOutfit(OutfitType type)
+    {
+        switch (type)
+        {
+            case OutfitType.Bottom:
+                bottomOutfit = null;
+                Destroy(_currentBottom);
+                break;
+            case OutfitType.Top:
+                topOutfit = null;
+                Destroy(_currentTop);
+                break;
+            case OutfitType.Hair:
+                hairOutfit = null;
+                Destroy(_currentHair);
+                break;
+            case OutfitType.Hat:
+                hatOutfit = null;
+                Destroy(_currentHat);
+                break;
+        }
+    }
 }

@@ -47,6 +47,9 @@ TagManager:
   - name: 0bas
     uniqueID: 3896733573
     locked: 0
+  - name: 0out
+    uniqueID: 648760945
+    locked: 0
   - name: 1out
     uniqueID: 2158353019
     locked: 0

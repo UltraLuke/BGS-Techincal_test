@@ -15,4 +15,4 @@ MonoBehaviour:
   value: 0
   itemObject: {fileID: 1303624114436195607, guid: c07fe7d08ba342a42b226a9733c9daa8, type: 3}
   itemSprite: {fileID: 326138851, guid: ba1acdd2241166342a27b1b525934a94, type: 3}
-  overridesHair: 1
+  overridesHair: 0
