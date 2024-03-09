@@ -40,49 +40,17 @@ public class CharacterOutfitHandler : MonoBehaviour
     //Sets bottom outfit
     public void SetOutfit(ItemOutfitBottom outfit)
     {
-        // if (outfit != null && outfit.itemObject != null)
-        // {
-        //     if (_currentBottom != null)
-        //         Destroy(_currentBottom);
-        //     
-        //     _currentBottom = Instantiate(outfit.itemObject, bottomSpace);
-        //     bottomOutfit = outfit;
-        // }
-
         SetOutfit(outfit, ref bottomOutfit, ref _currentBottom, bottomSpace);
     }
 
     //Sets top outfit
     public void SetOutfit(ItemOutfitTop outfit)
     {
-        // if (outfit != null && outfit.itemObject != null)
-        // {
-        //     if(_currentTop != null)
-        //         Destroy(_currentTop);
-        //     
-        //     _currentTop = Instantiate(outfit.itemObject, topSpace);
-        //     topOutfit = outfit;
-        // }
-        
         SetOutfit(outfit, ref topOutfit, ref _currentTop, topSpace);
     }
     //Sets hair
     public void SetOutfit(ItemOutfitHair outfit)
     {
-        // if (outfit != null && outfit.itemObject != null)
-        // {
-        //     //I destroy the old reference
-        //     if (_currentHair != null)
-        //         Destroy(_currentHair);
-        //     
-        //     _currentHair = Instantiate(outfit.itemObject, hairSpace);
-        //     hairOutfit = outfit;
-        //     
-        //     //When I set a hair and there's hat that overrides hair, I disable the hat
-        //     if (_currentHat != null && hatOutfit.OverridesHair)
-        //         _currentHat.SetActive(false);
-        // }
-        
         SetOutfit(outfit, ref hairOutfit, ref _currentHair, hairSpace, () =>
         {
             //When I set a hair and there's hat that overrides hair, I disable the hat
@@ -94,20 +62,6 @@ public class CharacterOutfitHandler : MonoBehaviour
     //Sets hat
     public void SetOutfit(ItemOutfitHat outfit)
     {
-        // if (outfit != null && outfit.itemObject != null)
-        // {
-        //     //I destroy the old reference
-        //     if (_currentHat != null)
-        //         Destroy(_currentHat);
-        //     
-        //     _currentHat = Instantiate(outfit.itemObject, hatSpace);
-        //     hatOutfit = outfit;
-        //     
-        //     //Checks if the hat overrides the hair (in case the hat and the hair don't look good together)
-        //     if (outfit.OverridesHair && _currentHair != null)
-        //         _currentHair.SetActive(false);
-        // }
-        
         SetOutfit(outfit, ref hatOutfit, ref _currentHat, hatSpace, () =>
         {
             //Checks if the hat overrides the hair (in case the hat and the hair don't look good together)

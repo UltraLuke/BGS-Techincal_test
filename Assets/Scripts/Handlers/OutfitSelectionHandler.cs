@@ -126,82 +126,35 @@ public class OutfitSelectionHandler : MonoBehaviour
     
     private void NextBottom()
     {
-        // _bottomIndex++;
-        //
-        // if (_bottomIndex >= bottomOutfits.Count)
-        //     _bottomIndex = 0;
-        
         ChangeOutfit(true, ref _bottomIndex, ref bottomOutfits, ref _currentBottom, x => outfitHandler.SetOutfit(x));
     }
     private void NextTop()
     {
-        // _topIndex++;
-        //
-        // if (_topIndex >= topOutfits.Count)
-        //     _topIndex = 0;
-        
         ChangeOutfit(true, ref _topIndex, ref topOutfits, ref _currentTop, x => outfitHandler.SetOutfit(x));
-
     }
     private void NextHair()
     {
-        // _hairIndex++;
-        //
-        // if (_hairIndex >= hairOutfits.Count)
-        //     _hairIndex = 0;
-        
         ChangeOutfit(true, ref _hairIndex, ref hairOutfits, ref _currentHair, x => outfitHandler.SetOutfit(x));
-
     }
     private void NextHat()
     {
-        // _hatIndex++;
-        //
-        // if (_hatIndex >= hatOutfits.Count)
-        //     _hatIndex = 0;
-        
         ChangeOutfit(true, ref _hatIndex, ref hatOutfits, ref _currentHat, x => outfitHandler.SetOutfit(x));
-
     }
 
     private void PreviousBottom()
     {
-        // _bottomIndex--;
-        //
-        // if (_bottomIndex < 0)
-        //     _bottomIndex = bottomOutfits.Count - 1;
-
         ChangeOutfit(false, ref _bottomIndex, ref bottomOutfits, ref _currentBottom, x => outfitHandler.SetOutfit(x));
-
     }
     private void PreviousTop()
     {
-        // _topIndex--;
-        //
-        // if (_topIndex < 0)
-        //     _topIndex = topOutfits.Count - 1;
-        
         ChangeOutfit(false, ref _topIndex, ref topOutfits, ref _currentTop, x => outfitHandler.SetOutfit(x));
-
-
     }
     private void PreviousHair()
     {
-        // _hairIndex--;
-        //
-        // if (_hairIndex < 0)
-        //     _hairIndex = hairOutfits.Count - 1;
-        
         ChangeOutfit(false, ref _hairIndex, ref hairOutfits, ref _currentHair, x => outfitHandler.SetOutfit(x));
-
     }
     private void PreviousHat()
     {
-        // _hatIndex--;
-        //
-        // if (_hatIndex < 0)
-        //     _hatIndex = hatOutfits.Count - 1;
-        
         ChangeOutfit(false, ref _hatIndex, ref hatOutfits, ref _currentHat, x => outfitHandler.SetOutfit(x));
     }
     #endregion
