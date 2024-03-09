@@ -140,7 +140,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 64
         y: 448
         width: 64
         height: 64
@@ -161,7 +161,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_2
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 448
         width: 64
         height: 64
@@ -182,7 +182,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_3
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 448
         width: 64
         height: 64
@@ -203,8 +203,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
+        x: 256
+        y: 448
         width: 64
         height: 64
       alignment: 0
@@ -224,8 +224,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 384
+        x: 320
+        y: 448
         width: 64
         height: 64
       alignment: 0
@@ -245,8 +245,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_6
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
+        x: 384
+        y: 448
         width: 64
         height: 64
       alignment: 0
@@ -266,8 +266,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_7
       rect:
         serializedVersion: 2
-        x: 192
-        y: 384
+        x: 448
+        y: 448
         width: 64
         height: 64
       alignment: 0
@@ -287,7 +287,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_8
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 384
         width: 64
         height: 64
@@ -308,7 +308,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_9
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 384
         width: 64
         height: 64
@@ -329,7 +329,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_10
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 384
         width: 64
         height: 64
@@ -350,7 +350,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_11
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 384
         width: 64
         height: 64
@@ -371,8 +371,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 320
+        x: 256
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -392,8 +392,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_13
       rect:
         serializedVersion: 2
-        x: 64
-        y: 320
+        x: 320
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -413,8 +413,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_14
       rect:
         serializedVersion: 2
-        x: 128
-        y: 320
+        x: 384
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -434,8 +434,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_15
       rect:
         serializedVersion: 2
-        x: 192
-        y: 320
+        x: 448
+        y: 384
         width: 64
         height: 64
       alignment: 0
@@ -455,7 +455,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_16
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 320
         width: 64
         height: 64
@@ -476,7 +476,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_17
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 320
         width: 64
         height: 64
@@ -497,7 +497,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_18
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 320
         width: 64
         height: 64
@@ -518,7 +518,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_19
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 320
         width: 64
         height: 64
@@ -539,8 +539,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_20
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
+        x: 256
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -560,8 +560,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_21
       rect:
         serializedVersion: 2
-        x: 64
-        y: 256
+        x: 320
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -581,8 +581,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_22
       rect:
         serializedVersion: 2
-        x: 128
-        y: 256
+        x: 384
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -602,8 +602,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_23
       rect:
         serializedVersion: 2
-        x: 192
-        y: 256
+        x: 448
+        y: 320
         width: 64
         height: 64
       alignment: 0
@@ -623,7 +623,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_24
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 256
         width: 64
         height: 64
@@ -644,7 +644,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_25
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 256
         width: 64
         height: 64
@@ -665,7 +665,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_26
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 256
         width: 64
         height: 64
@@ -686,7 +686,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_27
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 256
         width: 64
         height: 64
@@ -707,8 +707,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_28
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 256
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -728,8 +728,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_29
       rect:
         serializedVersion: 2
-        x: 64
-        y: 192
+        x: 320
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -749,8 +749,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_30
       rect:
         serializedVersion: 2
-        x: 128
-        y: 192
+        x: 384
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -770,8 +770,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_31
       rect:
         serializedVersion: 2
-        x: 192
-        y: 192
+        x: 448
+        y: 256
         width: 64
         height: 64
       alignment: 0
@@ -791,7 +791,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_32
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 192
         width: 64
         height: 64
@@ -812,7 +812,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_33
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 192
         width: 64
         height: 64
@@ -833,7 +833,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_34
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 192
         width: 64
         height: 64
@@ -854,7 +854,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_35
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 192
         width: 64
         height: 64
@@ -875,8 +875,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_36
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 256
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -896,8 +896,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_37
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 320
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -917,8 +917,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_38
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 384
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -938,8 +938,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_39
       rect:
         serializedVersion: 2
-        x: 192
-        y: 128
+        x: 448
+        y: 192
         width: 64
         height: 64
       alignment: 0
@@ -959,7 +959,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_40
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 128
         width: 64
         height: 64
@@ -980,7 +980,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_41
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 128
         width: 64
         height: 64
@@ -1001,7 +1001,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_42
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 128
         width: 64
         height: 64
@@ -1022,7 +1022,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_43
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 128
         width: 64
         height: 64
@@ -1043,8 +1043,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_44
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 256
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -1064,8 +1064,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_45
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 320
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -1085,8 +1085,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_46
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 384
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -1106,8 +1106,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_47
       rect:
         serializedVersion: 2
-        x: 192
-        y: 64
+        x: 448
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -1127,7 +1127,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_48
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 64
         width: 64
         height: 64
@@ -1148,7 +1148,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_49
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 64
         width: 64
         height: 64
@@ -1169,7 +1169,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_50
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 64
         width: 64
         height: 64
@@ -1190,7 +1190,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_51
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 64
         width: 64
         height: 64
@@ -1211,8 +1211,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_52
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 256
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -1232,8 +1232,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_53
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 320
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -1253,8 +1253,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_54
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 384
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -1274,8 +1274,8 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_55
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 448
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -1295,7 +1295,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_56
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
         y: 0
         width: 64
         height: 64
@@ -1316,7 +1316,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_57
       rect:
         serializedVersion: 2
-        x: 320
+        x: 64
         y: 0
         width: 64
         height: 64
@@ -1337,7 +1337,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_58
       rect:
         serializedVersion: 2
-        x: 384
+        x: 128
         y: 0
         width: 64
         height: 64
@@ -1358,7 +1358,7 @@ TextureImporter:
       name: char_a_p1_1out_boxr_v01_59
       rect:
         serializedVersion: 2
-        x: 448
+        x: 192
         y: 0
         width: 64
         height: 64
@@ -1371,6 +1371,90 @@ TextureImporter:
       bones: []
       spriteID: b43d8dc21775a124e8baf7f56f6ab579
       internalID: 447150462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_a_p1_1out_boxr_v01_60
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21f0d193865c7664f9d48b31c835aa78
+      internalID: 1094384461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_a_p1_1out_boxr_v01_61
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d274f4aea7c95498e1ce131921656f
+      internalID: 730811119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_a_p1_1out_boxr_v01_62
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25caed2cc4e41824183addf2a3025d3e
+      internalID: -1212159143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: char_a_p1_1out_boxr_v01_63
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d80f54fbc43cbba45924ef3c52ee96f7
+      internalID: 1943095041
       vertices: []
       indices: 
       edges: []
@@ -1391,6 +1475,7 @@ TextureImporter:
       char_a_p1_1out_boxr_v01_21: 1950360814
       char_a_p1_1out_boxr_v01_4: 2040493492
       char_a_p1_1out_boxr_v01_35: -1071452597
+      char_a_p1_1out_boxr_v01_62: -1212159143
       char_a_p1_1out_boxr_v01_8: 493505977
       char_a_p1_1out_boxr_v01_55: -369964622
       char_a_p1_1out_boxr_v01_56: 1826032294
@@ -1402,6 +1487,7 @@ TextureImporter:
       char_a_p1_1out_boxr_v01_46: 1035177863
       char_a_p1_1out_boxr_v01_58: -1889806924
       char_a_p1_1out_boxr_v01_14: 1554515254
+      char_a_p1_1out_boxr_v01_60: 1094384461
       char_a_p1_1out_boxr_v01_13: -934823117
       char_a_p1_1out_boxr_v01_23: 950599292
       char_a_p1_1out_boxr_v01_38: 1156463795
@@ -1422,6 +1508,7 @@ TextureImporter:
       char_a_p1_1out_boxr_v01_2: 981235121
       char_a_p1_1out_boxr_v01_24: 1542588157
       char_a_p1_1out_boxr_v01_39: -702739148
+      char_a_p1_1out_boxr_v01_61: 730811119
       char_a_p1_1out_boxr_v01_19: 1636813652
       char_a_p1_1out_boxr_v01_42: 1506208533
       char_a_p1_1out_boxr_v01_1: 1109754900
@@ -1430,6 +1517,7 @@ TextureImporter:
       char_a_p1_1out_boxr_v01_3: 839898597
       char_a_p1_1out_boxr_v01_27: 595994901
       char_a_p1_1out_boxr_v01_52: 1172254573
+      char_a_p1_1out_boxr_v01_63: 1943095041
       char_a_p1_1out_boxr_v01_28: 1132755989
       char_a_p1_1out_boxr_v01_49: 448350416
       char_a_p1_1out_boxr_v01_6: 324244415
