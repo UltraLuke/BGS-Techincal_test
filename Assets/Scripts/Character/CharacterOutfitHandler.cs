@@ -19,7 +19,15 @@ public class CharacterOutfitHandler : MonoBehaviour
     private GameObject _currentHat;
     private GameObject _currentTop;
     private GameObject _currentBottom;
-    
+
+    private void Start()
+    {
+        SetOutfit(bottomOutfit);
+        SetOutfit(topOutfit);
+        SetOutfit(hairOutfit);
+        SetOutfit(hatOutfit);
+    }
+
     #region Outfit setters
 
     //Base setter

@@ -8,28 +8,28 @@ public class PlayerView : MonoBehaviour
 {
     [SerializeField] private List<Animator> animators;
 
-    private void Awake()
-    {
-        RefreshAnimatorReferences();
-    }
-
-    private void RefreshAnimatorReferences()
-    {
-        animators = GetComponentsInChildren<Animator>().ToList();
-    }
-
     public void AddAnimator(Animator anim)
     {
-        if(!animators.Contains(anim))
+        if (!animators.Contains(anim))
+        {
             animators.Add(anim);
+            foreach (var a in animators)
+            {
+                a.SetTrigger("Restart");
+            }
+        }
     }
 
     public void SetMovementAxes(float h, float v)
     {
         for (int i = 0; i < animators.Count; i++)
         {
-            if(!animators[i])
+            if (animators[i] == null)
+            {
+                animators.RemoveAt(i);
+                i--;
                 continue;
+            }
             
             animators[i].SetFloat("hAxis", h);
             animators[i].SetFloat("vAxis", v);
