@@ -41,3 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 1out
+    uniqueID: 2158353019
+    locked: 0
+  - name: 2clo
+    uniqueID: 2390326153
+    locked: 0
+  - name: 3fac
+    uniqueID: 1132844743
+    locked: 0
+  - name: 4har
+    uniqueID: 2313538943
+    locked: 0
+  - name: 5hat
+    uniqueID: 741412847
+    locked: 0
+  - name: 6tla
+    uniqueID: 1809956413
+    locked: 0
+  - name: 7tlb
+    uniqueID: 1924993379
+    locked: 0
