@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e45e1c699214c04b5db8798d737a82c, type: 3}
   m_Name: Bottom2
   m_EditorClassIdentifier: 
+  buyValue: 10
+  sellValue: 2
+  title: Underwear
   itemObject: {fileID: 1333621448219192377, guid: 3411ad7704aff44448d1950595e9a660, type: 3}
   itemSprite: {fileID: 732154530, guid: 3eecc40b61f76fc4891b2d5f12f69ded, type: 3}

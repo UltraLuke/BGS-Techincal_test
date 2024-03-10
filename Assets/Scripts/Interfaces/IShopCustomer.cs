@@ -6,5 +6,6 @@ public interface IShopCustomer
 {
     void BoughtItem(Item item);
     bool TrySpendGoldAmount(int spendGoldAmount);
+    bool CheckIfEnoughSpaceInInventory();
     Item[] GetCustomerInventory();
 }

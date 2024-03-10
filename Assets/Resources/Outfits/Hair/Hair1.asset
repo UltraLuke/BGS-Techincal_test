@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957f6aa40ade4a23a88bbf9d46ddde0b, type: 3}
   m_Name: Hair1
   m_EditorClassIdentifier: 
+  buyValue: 20
+  sellValue: 8
+  title: Woman hair
   itemObject: {fileID: 6922938974161700934, guid: 85244f97adbde9549aa9ed64b42e4318, type: 3}
   itemSprite: {fileID: -1393826286, guid: 47618149324edd740870a0f75ee9f586, type: 3}

@@ -94,7 +94,8 @@ public class PlayerController : MonoBehaviour, IShopCustomer
 
     public void BoughtItem(Item item)
     {
-        Debug.Log("Bought item: " + item.title);
+        // Debug.Log("Bought item: " + item.title);
+        _inventory.AddItem(item);
     }
 
     public bool TrySpendGoldAmount(int spendGoldAmount)
@@ -108,6 +109,11 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         {
             return false;
         }
+    }
+
+    public bool CheckIfEnoughSpaceInInventory()
+    {
+        return _inventory.CheckAvailableSpace();
     }
 
     public Item[] GetCustomerInventory()

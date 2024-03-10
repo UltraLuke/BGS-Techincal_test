@@ -40,15 +40,22 @@ public class InventoryArea : MonoBehaviour
         inventoryItem.InitialiseItem(item);
     }
 
-    private bool FindFirstEmptySlot(out InventorySlot slot)
+    public bool FindFirstEmptySlot(out InventorySlot slot)
     {
         slot = _slots.FirstOrDefault(x => x.IsEmpty);
         return slot != default;
     }
 
+    public bool CheckSpace()
+    {
+        return _slots.Any(x => x.IsEmpty);
+    }
+
     public Item[] GetItems()
     {
-        return _slots.Where(x => x.IsEmpty)
+        GetSlots();
+        
+        return _slots.Where(x => !x.IsEmpty)
                      .Select(x => x.GetComponentInChildren<InventoryItem>())
                      .Select(x => x.item).ToArray();
     }

@@ -171,6 +171,7 @@ MonoBehaviour:
   image: {fileID: 5181181338732794422}
   titleText: {fileID: 3488659329726641175}
   coinsText: {fileID: 7610549963595336763}
+  _button: {fileID: 9194815220512917031}
 --- !u!114 &9194815220512917031
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,4 +31,14 @@ public class InventoryHandler : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+
+    public bool AddItem(Item item)
+    {
+        return _inventoryArea.AddNewItem(item);
+    }
+
+    public bool CheckAvailableSpace()
+    {
+        return _inventoryArea.CheckSpace();
+    }
 }

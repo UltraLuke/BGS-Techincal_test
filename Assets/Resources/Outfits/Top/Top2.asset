@@ -12,5 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2b445da3da43f1b9250fc4bcd0b272, type: 3}
   m_Name: Top2
   m_EditorClassIdentifier: 
+  buyValue: 50
+  sellValue: 20
+  title: Top clothing 2
   itemObject: {fileID: 7468237233670399212, guid: f1668b50bc6abe24abda1bbce933ae78, type: 3}
   itemSprite: {fileID: 2036939160, guid: e656b1a48e05400488dc6cf0a4fd5155, type: 3}

@@ -96,8 +96,6 @@ public class InventoryOutfitSlot : InventorySlot, IBeginDragHandler
                 }
             }
         }
-        
-        Debug.Log("Outfit Dropped");
     }
     
     private void CheckOutfitHandlers(out bool player, out bool inventory)
