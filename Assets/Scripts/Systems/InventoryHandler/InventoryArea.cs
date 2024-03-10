@@ -40,6 +40,15 @@ public class InventoryArea : MonoBehaviour
         inventoryItem.InitialiseItem(item);
     }
 
+    public void RemoveItem(Item item)
+    {
+        var itemSlot = _slots.Where(x => !x.IsEmpty)
+                             .FirstOrDefault(x => x.ItemInSlot.item == item);
+        
+        if(itemSlot != null)
+            itemSlot.RemoveItem();
+    }
+
     public bool FindFirstEmptySlot(out InventorySlot slot)
     {
         slot = _slots.FirstOrDefault(x => x.IsEmpty);
@@ -59,13 +68,4 @@ public class InventoryArea : MonoBehaviour
                      .Select(x => x.GetComponentInChildren<InventoryItem>())
                      .Select(x => x.item).ToArray();
     }
-
-    // private void ChangeSelectedSlot(int newValue)
-    // {
-    //     if(selectedSlot >= 0)
-    //         _slots[selectedSlot].Deselect();
-    //     
-    //     _slots[newValue].Select();
-    //     selectedSlot = newValue;
-    // }
 }

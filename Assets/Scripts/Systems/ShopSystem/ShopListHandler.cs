@@ -10,24 +10,50 @@ public class ShopListHandler : MonoBehaviour
     [SerializeField] private ShopItem shopItemPrefab;
     [SerializeField] private GameObject noItemsText;
 
+    private bool _alreadyInitialised;
+    private List<ShopItem> _shopItems;
+
     private void OnEnable()
     {
-        if (items == null || items.Count == 0)
+        CheckIfEmpty();
+    }
+
+    private void CheckIfEmpty()
+    {
+        if (_shopItems == null || _shopItems.Count == 0)
             noItemsText.SetActive(true);
         else
             noItemsText.SetActive(false);
     }
 
-    public void Initialise(Action<Item> onClickButtonEvent)
+    public void Initialise(Func<Item,bool> onClickButtonEvent)
     {
+        if (_alreadyInitialised) return;
+            
+        _shopItems ??= new List<ShopItem>();
+        
         foreach (var item in items)
         {
-            Instantiate(shopItemPrefab, itemList).InitialiseItem(item, item.itemSprite, item.title, item.buyValue, x =>
+            var shopItem = Instantiate(shopItemPrefab, itemList);
+            shopItem.InitialiseItem(item, item.itemSprite, item.title, item.buyValue, x =>
             {
-                onClickButtonEvent?.Invoke(x);
-                items.Remove(x);
+                if (onClickButtonEvent(x))
+                {
+                    var shopIt = _shopItems.FirstOrDefault(shopIt => shopIt.GetItem == x);
+                    items.Remove(x);
+                    _shopItems.Remove(shopIt);
+                    
+                    if(shopIt != null)
+                        shopIt.gameObject.SetActive(false);
+
+                    CheckIfEmpty();
+                }
             });
+            _shopItems.Add(shopItem);
         }
 
+        CheckIfEmpty();
+
+        _alreadyInitialised = true;
     }
 }

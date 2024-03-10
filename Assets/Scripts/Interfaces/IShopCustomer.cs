@@ -8,4 +8,5 @@ public interface IShopCustomer
     bool TrySpendGoldAmount(int spendGoldAmount);
     bool CheckIfEnoughSpaceInInventory();
     Item[] GetCustomerInventory();
+    void SellItem(Item item);
 }

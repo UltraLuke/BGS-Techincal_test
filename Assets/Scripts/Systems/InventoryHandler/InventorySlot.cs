@@ -13,6 +13,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public Color selectedColor, notSelectedColor;
 
     public bool IsEmpty => GetComponentInChildren<InventoryItem>() == null;
+    public InventoryItem ItemInSlot => GetComponentInChildren<InventoryItem>(); 
 
     protected virtual void Awake()
     {
@@ -29,5 +30,10 @@ public class InventorySlot : MonoBehaviour, IDropHandler
             if(eventData.pointerDrag.TryGetComponent<InventoryItem>(out var inventoryItem))
                 inventoryItem.parentAfterDrag = transform;
         }
+    }
+
+    public void RemoveItem()
+    { 
+        Destroy(ItemInSlot.gameObject);
     }
 }

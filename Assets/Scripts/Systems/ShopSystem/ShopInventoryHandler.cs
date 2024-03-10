@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ShopInventoryHandler : MonoBehaviour
@@ -12,6 +13,11 @@ public class ShopInventoryHandler : MonoBehaviour
     private List<ShopItem> _shopItems;
 
     private void OnEnable()
+    {
+        CheckIfEmpty();
+    }
+
+    private void CheckIfEmpty()
     {
         if (_shopItems == null || _shopItems.Count == 0)
             noItemsText.SetActive(true);
@@ -30,14 +36,27 @@ public class ShopInventoryHandler : MonoBehaviour
         foreach (var item in _shopCustomer.GetCustomerInventory())
         {
             var shopItem = Instantiate(shopItemPrefab, itemList);
-            
-            //ADD SELLING EVENT
-            shopItem.InitialiseItem(item, item.itemSprite, item.title, item.sellValue, item1 => {});
+            shopItem.InitialiseItem(item, item.itemSprite, item.title, item.sellValue, it =>
+            {
+                _shopCustomer.SellItem(item);
+                var shopIt = _shopItems.FirstOrDefault(shopIt => shopIt.GetItem == it);
+                _shopItems.Remove(shopIt);
+                
+                if(shopIt != null)
+                    shopIt.gameObject.SetActive(false);
+                
+                CheckIfEmpty();
+            });
             _shopItems.Add(shopItem);
         }
-        
-        noItemsText.SetActive(noItemsText);
+    }
 
+    public void RefreshItems()
+    {
+        if (_shopCustomer != null)
+            Initialise(_shopCustomer);
+        
+        CheckIfEmpty();
     }
 
     private void DestroyOldItems()

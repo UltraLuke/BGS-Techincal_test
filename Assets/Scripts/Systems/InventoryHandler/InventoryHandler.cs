@@ -8,6 +8,7 @@ public class InventoryHandler : MonoBehaviour
 {
     [SerializeField] private InventoryArea _inventoryArea;
     [SerializeField] private Item[] startingItems;
+    [SerializeField] private GameObject backpackIcon;
 
     private void Start()
     {
@@ -25,20 +26,28 @@ public class InventoryHandler : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
+        backpackIcon.SetActive(false);
     }
     
     public void Hide()
     {
         gameObject.SetActive(false);
+        backpackIcon.SetActive(true);
     }
 
     public bool AddItem(Item item)
     {
         return _inventoryArea.AddNewItem(item);
     }
+    
+    public void RemoveItem(Item item)
+    {
+        _inventoryArea.RemoveItem(item);
+    }
 
     public bool CheckAvailableSpace()
     {
         return _inventoryArea.CheckSpace();
     }
+
 }

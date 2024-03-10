@@ -7,20 +7,25 @@ public class ShopManager : MonoBehaviour
 
     private IShopCustomer _customer;
 
-    private void TryBuyItem(Item item)
+    private bool TryBuyItem(Item item)
     {
         if (_customer.CheckIfEnoughSpaceInInventory())
         {
-            if(_customer.TrySpendGoldAmount(item.buyValue))
+            if (_customer.TrySpendGoldAmount(item.buyValue))
+            {
                 _customer.BoughtItem(item);
+                return true;
+            }
             else
             {
                 Debug.Log("Not enough coins");
+                return false;
             }
         }
         else
         {
             Debug.Log("Not enough space");
+            return false;
         }
     }
     

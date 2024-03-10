@@ -120,4 +120,10 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     {
         return _inventory.GetItems();
     }
+
+    public void SellItem(Item item)
+    {
+        _coinsHandler.EarnCoins(item.sellValue);
+        _inventory.RemoveItem(item);
+    }
 }
