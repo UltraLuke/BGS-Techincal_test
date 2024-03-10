@@ -11,10 +11,16 @@ public class ShopInventoryHandler : MonoBehaviour
 
     private IShopCustomer _shopCustomer;
     private List<ShopItem> _shopItems;
-
+    
     private void OnEnable()
     {
-        CheckIfEmpty();
+        // CheckIfEmpty();
+        RefreshItems();
+    }
+
+    private void OnDisable()
+    {
+        DestroyOldItems();
     }
 
     private void CheckIfEmpty()
@@ -27,7 +33,7 @@ public class ShopInventoryHandler : MonoBehaviour
 
     public void Initialise(IShopCustomer customer)
     {
-        DestroyOldItems();
+        // DestroyOldItems();
         
         _shopCustomer = customer;
 
@@ -54,9 +60,12 @@ public class ShopInventoryHandler : MonoBehaviour
     public void RefreshItems()
     {
         if (_shopCustomer != null)
+        {
+            DestroyOldItems();
             Initialise(_shopCustomer);
+            CheckIfEmpty();
+        }
         
-        CheckIfEmpty();
     }
 
     private void DestroyOldItems()
@@ -64,7 +73,7 @@ public class ShopInventoryHandler : MonoBehaviour
         if (_shopItems == null) return;
         
         foreach (var item in _shopItems)
-            Destroy(item);
+            Destroy(item.gameObject);
         
         _shopItems = null;
     }
