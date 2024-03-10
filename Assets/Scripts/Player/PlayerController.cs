@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IShopCustomer
 {
     [SerializeField] private PlayerModel _model;
     [SerializeField] private PlayerView _view;
+    [SerializeField] private CoinsHandler _coinsHandler;
+    [SerializeField] private InventoryHandler _inventory;
 
     [SerializeField] float idleThreshold = 0.2f;
     
@@ -21,6 +23,25 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         CheckAxes();
+    }
+
+    private void Update()
+    {
+        CheckKeys();
+    }
+
+    private void CheckKeys()
+    {
+        if (Input.GetButtonDown("Inventory"))
+        {
+            if (_inventory != null)
+            {
+                if(!_inventory.gameObject.activeSelf)
+                    _inventory.Show();
+                else
+                    _inventory.Hide();
+            }
+        }
     }
 
     private void CheckAxes()
@@ -68,5 +89,29 @@ public class PlayerController : MonoBehaviour
             _yAnim = -idleThreshold;
         
         _view.SetMovementAxes(_xAnim, _yAnim);
+    }
+
+
+    public void BoughtItem(Item item)
+    {
+        Debug.Log("Bought item: " + item.title);
+    }
+
+    public bool TrySpendGoldAmount(int spendGoldAmount)
+    {
+        if (_coinsHandler.GetCoinsAmount() >= spendGoldAmount)
+        {
+            _coinsHandler.SpendCoins(spendGoldAmount);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public Item[] GetCustomerInventory()
+    {
+        return _inventory.GetItems();
     }
 }

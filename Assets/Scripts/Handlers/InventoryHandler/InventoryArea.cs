@@ -46,6 +46,13 @@ public class InventoryArea : MonoBehaviour
         return slot != default;
     }
 
+    public Item[] GetItems()
+    {
+        return _slots.Where(x => x.IsEmpty)
+                     .Select(x => x.GetComponentInChildren<InventoryItem>())
+                     .Select(x => x.item).ToArray();
+    }
+
     // private void ChangeSelectedSlot(int newValue)
     // {
     //     if(selectedSlot >= 0)
