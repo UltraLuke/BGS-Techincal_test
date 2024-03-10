@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb0af7853ca4e3e9281b7ce439d0acb, type: 3}
   m_Name: Hat2
   m_EditorClassIdentifier: 
-  value: 0
   itemObject: {fileID: 5469463454515678290, guid: 8727ce0823efd654b815a91bbde5fd9d, type: 3}
-  itemSprite: {fileID: 320257288, guid: a5370f3794c39a447a437fd55ce9b658, type: 3}
-  overridesHair: 1
+  itemSprite: {fileID: 181963546, guid: a5370f3794c39a447a437fd55ce9b658, type: 3}
+  overridesHair: 0

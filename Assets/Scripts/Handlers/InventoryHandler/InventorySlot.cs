@@ -14,7 +14,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
 
     public bool IsEmpty => GetComponentInChildren<InventoryItem>() == null;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         Deselect();
     }
@@ -22,7 +22,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
     public void Select() => image.color = selectedColor;
     public void Deselect() => image.color = notSelectedColor;
 
-    public void OnDrop(PointerEventData eventData)
+    public virtual void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0)
         {

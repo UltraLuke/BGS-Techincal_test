@@ -17,6 +17,10 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     private InventorySlot _currentSlot;
 
+    public Action aOnBeginDrag;
+    public Action aOnDrag;
+    public Action aOnEndDrag;
+
     public void InitialiseItem(Item newItem)
     {
         item = newItem;
@@ -29,11 +33,13 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = false;
         parentAfterDrag = transform.parent;
         transform.SetParent(transform.root);
+        aOnBeginDrag?.Invoke();
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
+        aOnDrag?.Invoke();
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -41,6 +47,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
         _currentSlot = GetComponentInParent<InventorySlot>();
+        aOnEndDrag?.Invoke();
     }
     
     public void Select()

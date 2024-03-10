@@ -12,7 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b2b445da3da43f1b9250fc4bcd0b272, type: 3}
   m_Name: Top1
   m_EditorClassIdentifier: 
-  value: 0
   itemObject: {fileID: 6331838349218761968, guid: 530be8f9ede02f44b9e4eb2824516661, type: 3}
-  itemSprite: {fileID: 698354335, guid: db21b154a03344d4b91173dbe848bc58, type: 3}
-  overridesBottom: 1
+  itemSprite: {fileID: -1227988565, guid: db21b154a03344d4b91173dbe848bc58, type: 3}

@@ -87,6 +87,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  isPlayer: 1
 --- !u!114 &1055588883092277896
 MonoBehaviour:
   m_ObjectHideFlags: 0

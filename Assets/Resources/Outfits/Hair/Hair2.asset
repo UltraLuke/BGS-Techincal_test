@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 957f6aa40ade4a23a88bbf9d46ddde0b, type: 3}
   m_Name: Hair2
   m_EditorClassIdentifier: 
-  value: 0
   itemObject: {fileID: 727698026767477836, guid: 8341e87360eeaab4abd462428d69722f, type: 3}
-  itemSprite: {fileID: -637161702, guid: de364df00744e7047973afd646bfe01e, type: 3}
+  itemSprite: {fileID: -1610662707, guid: de364df00744e7047973afd646bfe01e, type: 3}
