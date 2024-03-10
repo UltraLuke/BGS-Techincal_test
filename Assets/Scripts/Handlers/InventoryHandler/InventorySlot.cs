@@ -9,35 +9,25 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
-    // [SerializeField] private Item startingItem;
-    // [SerializeField] private Image image;
+    public Image image;
+    public Color selectedColor, notSelectedColor;
 
     public bool IsEmpty => GetComponentInChildren<InventoryItem>() == null;
 
-    private void Start()
+    private void Awake()
     {
-        // _item = startingItem;
+        Deselect();
     }
 
-    public void AddOrReplace(Item i)
-    {
-        // _item = i;
-    }
-
-    public Item Remove()
-    {
-        // Item removedItem = _item;
-        // _item = null;
-        // return removedItem;
-        return default;
-    }
+    public void Select() => image.color = selectedColor;
+    public void Deselect() => image.color = notSelectedColor;
 
     public void OnDrop(PointerEventData eventData)
     {
         if (transform.childCount == 0)
         {
-            InventoryItem inventoryItem = eventData.pointerDrag.GetComponent<InventoryItem>();
-            inventoryItem.parentAfterDrag = transform;
+            if(eventData.pointerDrag.TryGetComponent<InventoryItem>(out var inventoryItem))
+                inventoryItem.parentAfterDrag = transform;
         }
     }
 }

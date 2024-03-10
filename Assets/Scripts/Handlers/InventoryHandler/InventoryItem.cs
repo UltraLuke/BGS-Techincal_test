@@ -15,10 +15,13 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public Item item;
     [HideInInspector] public Transform parentAfterDrag;
 
+    private InventorySlot _currentSlot;
+
     public void InitialiseItem(Item newItem)
     {
         item = newItem;
         image.sprite = newItem.itemSprite;
+        _currentSlot = GetComponentInParent<InventorySlot>();
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -37,5 +40,18 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     {
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
+        _currentSlot = GetComponentInParent<InventorySlot>();
+    }
+    
+    public void Select()
+    {
+        if(_currentSlot != null)
+            _currentSlot.Select();
+    }
+
+    public void Deselect()
+    {
+        if(_currentSlot != null)
+            _currentSlot.Deselect();
     }
 }

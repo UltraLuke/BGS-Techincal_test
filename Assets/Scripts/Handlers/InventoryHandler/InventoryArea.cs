@@ -8,13 +8,15 @@ public class InventoryArea : MonoBehaviour
 {
     public GameObject inventoryItemPrefab;
     private InventorySlot[] _slots;
-
+    private int selectedSlot = -1;
+    
     private void Start()
     {
         GetSlots();
+        // ChangeSelectedSlot(0);
     }
 
-    public void GetSlots()
+    private void GetSlots()
     {
         if (_slots == null)
             _slots = GetComponentsInChildren<InventorySlot>();
@@ -38,19 +40,18 @@ public class InventoryArea : MonoBehaviour
         inventoryItem.InitialiseItem(item);
     }
 
-    public void ReplaceItem(Item newItem, InventorySlot slot)
-    {
-        slot.AddOrReplace(newItem);
-    }
-
-    public Item RemoveItem(InventorySlot slot)
-    {
-        return slot.Remove();
-    }
-
     private bool FindFirstEmptySlot(out InventorySlot slot)
     {
         slot = _slots.FirstOrDefault(x => x.IsEmpty);
         return slot != default;
     }
+
+    // private void ChangeSelectedSlot(int newValue)
+    // {
+    //     if(selectedSlot >= 0)
+    //         _slots[selectedSlot].Deselect();
+    //     
+    //     _slots[newValue].Select();
+    //     selectedSlot = newValue;
+    // }
 }
