@@ -14,7 +14,6 @@ public class ShopInventoryHandler : MonoBehaviour
     
     private void OnEnable()
     {
-        // CheckIfEmpty();
         RefreshItems();
     }
 

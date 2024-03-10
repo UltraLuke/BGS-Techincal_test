@@ -4,7 +4,8 @@ public class ShopManager : MonoBehaviour
 {
     [SerializeField] private ShopListHandler shopList;
     [SerializeField] private ShopInventoryHandler shopInventory;
-
+    [SerializeField] private GameObject backpackGO;
+    
     private IShopCustomer _customer;
 
     private bool TryBuyItem(Item item)
@@ -35,6 +36,7 @@ public class ShopManager : MonoBehaviour
         gameObject.SetActive(true);
         shopList.Initialise(TryBuyItem);
         shopInventory.Initialise(customer);
+        backpackGO.SetActive(false);
     }
 
     public void Hide()
@@ -42,6 +44,7 @@ public class ShopManager : MonoBehaviour
         _customer = null;
         shopList.gameObject.SetActive(true);
         shopInventory.gameObject.SetActive(false);
+        backpackGO.SetActive(true);
         gameObject.SetActive(false);
     }
 }
