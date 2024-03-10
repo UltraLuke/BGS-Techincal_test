@@ -6,6 +6,11 @@ public class CoinsHandler : MonoBehaviour, ICoinsHolder
     [SerializeField] private int coins;
     private Action<int> _onChangeCoins;
 
+    private void Start()
+    {
+        _onChangeCoins?.Invoke(coins);
+    }
+
     public void SpendCoins(int qty)
     {
         coins -= qty;
