@@ -23,11 +23,16 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     private bool _inputBlocked;
 
     #region Handled Events
+    
+    //I subscribe methods that I want to be fired when an event occurs
+    //In this case, I want to block the inputs when the game is paused
     private void OnEnable()
     {
         EventsManager.SubscribeToEvent("EV_PAUSE_GAME", StopInputCheck);
         EventsManager.SubscribeToEvent("EV_RESUME_GAME", ResumeInputCheck);
     }
+    
+    //When the player is disabled, unsubscribes the methods to avoid persistence 
     private void OnDisable()
     {
         EventsManager.UnsubscribeToEvent("EV_PAUSE_GAME", StopInputCheck);
@@ -93,6 +98,13 @@ public class PlayerController : MonoBehaviour, IShopCustomer
 
     private void MoveAnimation(float h, float v, float lastH, float lastV)
     {
+        //If H is not zero, it sends the given value to the Animator
+        //If it's zero, checks the corresponding last value:
+        //-- If the last value is different than zero then I send the threshold value, to set correct Idle animation
+        //-- If the last value is zero, then, I don't modify the variable
+        
+        // === The last is also applicable for V ===
+        
         if (Mathf.Abs(h) > ZERO_THRESHOLD)
         {
             if (Mathf.Abs(_yAnim) == idleThreshold)
@@ -120,10 +132,10 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         _view.SetMovementAxes(_xAnim, _yAnim);
     }
 
-
+    #region Shop Customer interface methods
+    
     public void BoughtItem(Item item)
     {
-        // Debug.Log("Bought item: " + item.title);
         _inventory.AddItem(item);
     }
 
@@ -155,4 +167,5 @@ public class PlayerController : MonoBehaviour, IShopCustomer
         _coinsHandler.EarnCoins(item.sellValue);
         _inventory.RemoveItem(item);
     }
+    #endregion
 }

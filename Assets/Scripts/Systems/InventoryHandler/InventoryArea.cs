@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class InventoryArea : MonoBehaviour
 {
+    //This script covers the area of unequipped items
+    //It has some functionality from tutorials but it has many modifications and additions to them
+    
     public GameObject inventoryItemPrefab;
     private InventorySlot[] _slots;
     private int selectedSlot = -1;
@@ -13,7 +16,6 @@ public class InventoryArea : MonoBehaviour
     private void Start()
     {
         GetSlots();
-        // ChangeSelectedSlot(0);
     }
 
     private void GetSlots()
@@ -21,7 +23,7 @@ public class InventoryArea : MonoBehaviour
         if (_slots == null)
             _slots = GetComponentsInChildren<InventorySlot>();
     }
-
+    #region Tutorial methods
     public bool AddNewItem(Item item)
     {
         if (FindFirstEmptySlot(out var slot))
@@ -39,6 +41,7 @@ public class InventoryArea : MonoBehaviour
         InventoryItem inventoryItem = newItemGO.GetComponent<InventoryItem>();
         inventoryItem.InitialiseItem(item);
     }
+    #endregion
 
     public void RemoveItem(Item item)
     {
@@ -49,6 +52,7 @@ public class InventoryArea : MonoBehaviour
             itemSlot.RemoveItem();
     }
 
+    //I added this script to find the first empty slot. Useful to check if I can save an item 
     public bool FindFirstEmptySlot(out InventorySlot slot)
     {
         slot = _slots.FirstOrDefault(x => x.IsEmpty);

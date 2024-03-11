@@ -5,6 +5,7 @@ public class TooltipInventoryItem : MonoBehaviour, IPointerEnterHandler, IPointe
 {
     [SerializeField] private InventoryItem inventoryItem;
     
+    //Instead of OnMouseEnter and OnMouseExit, I use OnPointerEnter and OnPointerExit because these work in UI
     public void OnPointerEnter(PointerEventData eventData)
     {
         TooltipManager.instance.SetAndShowToolTip(inventoryItem.item.title);

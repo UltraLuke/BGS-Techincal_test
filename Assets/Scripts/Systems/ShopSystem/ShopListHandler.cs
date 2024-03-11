@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ShopListHandler : MonoBehaviour
 {
+    //This script manages the buying list
+    //It was NOT taken from tutorials
+    
     [SerializeField] private List<Item> items;
     [SerializeField] private Transform itemList;
     [SerializeField] private ShopItem shopItemPrefab;

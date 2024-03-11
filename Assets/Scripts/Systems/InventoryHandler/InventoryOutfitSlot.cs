@@ -4,11 +4,14 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
-public class InventoryOutfitSlot : InventorySlot, IBeginDragHandler
+public class InventoryOutfitSlot : InventorySlot
 {
-    // [SerializeField] private UnityEvent<ItemOutfit> onOutfitSet;
+    //This script overrides the original OnDrop functionality to provide comparison and filtering.
+    //Each outfit slot allows one type of outfit
+    
     [SerializeField] private OutfitType outfitType;
 
+    //The player and the visual character of the inventory
     [SerializeField] private CharacterOutfitHandler playerOutfitHandler;
     [SerializeField] private CharacterOutfitHandler inventoryOutfitHandler;
 
@@ -20,6 +23,7 @@ public class InventoryOutfitSlot : InventorySlot, IBeginDragHandler
             {
                 CheckOutfitHandlers(out bool playerHandler, out bool inventoryHandler);
                 
+                //Checks if the item the player wants to drop is the correct type
                 switch (outfitType)
                 {
                     case OutfitType.Bottom:
@@ -32,6 +36,7 @@ public class InventoryOutfitSlot : InventorySlot, IBeginDragHandler
                             if(inventoryHandler)
                                 inventoryOutfitHandler.SetOutfit(bottomOutfit);
 
+                            //Takes the outfit out from the character in world an inventory
                             inventoryItem.aOnBeginDrag = () =>
                             {
                                 playerOutfitHandler.ClearOutfit(OutfitType.Bottom);
@@ -50,6 +55,7 @@ public class InventoryOutfitSlot : InventorySlot, IBeginDragHandler
                             if(inventoryHandler)
                                 inventoryOutfitHandler.SetOutfit(topOutfit);
                             
+                            //Takes the outfit out from the character in world an inventory
                             inventoryItem.aOnBeginDrag = () =>
                             {
                                 playerOutfitHandler.ClearOutfit(OutfitType.Top);
@@ -68,6 +74,7 @@ public class InventoryOutfitSlot : InventorySlot, IBeginDragHandler
                             if(inventoryHandler)
                                 inventoryOutfitHandler.SetOutfit(hairOutfit);
                             
+                            //Takes the outfit out from the character in world an inventory
                             inventoryItem.aOnBeginDrag = () =>
                             {
                                 playerOutfitHandler.ClearOutfit(OutfitType.Hair);
@@ -86,6 +93,7 @@ public class InventoryOutfitSlot : InventorySlot, IBeginDragHandler
                             if(inventoryHandler)
                                 inventoryOutfitHandler.SetOutfit(hatOutfit);
                             
+                            //Takes the outfit out from the character in world an inventory
                             inventoryItem.aOnBeginDrag = () =>
                             {
                                 playerOutfitHandler.ClearOutfit(OutfitType.Hat);
@@ -116,10 +124,5 @@ public class InventoryOutfitSlot : InventorySlot, IBeginDragHandler
             specificOutfit = default;
             return false;
         }
-    }
-
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        Debug.Log("Dragging outfit");
     }
 }

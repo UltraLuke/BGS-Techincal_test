@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This scripts represents the actual outfit the player uses in the world
 [RequireComponent(typeof(Animator))]
 public class Outfit : MonoBehaviour
 {

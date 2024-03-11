@@ -9,6 +9,9 @@ using UnityEngine.UI;
 
 public class InventorySlot : MonoBehaviour, IDropHandler
 {
+    //This script was mainly taken form tutorials from internet.
+    //It has been extended with inheritance to provide additional functionality to outfit slots (see InventoryOutfitSlot.cs)
+    
     public Image image;
     public Color selectedColor, notSelectedColor;
 
@@ -32,6 +35,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
         }
     }
 
+    //I added this method when an item from the inventory is being removed
     public void RemoveItem()
     { 
         Destroy(ItemInSlot.gameObject);

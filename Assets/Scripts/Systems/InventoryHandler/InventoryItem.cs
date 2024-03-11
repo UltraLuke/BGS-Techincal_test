@@ -8,6 +8,8 @@ using UnityEngine.UI;
 
 public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
+    //This class has been taken from a tutorial on internet
+    //It has been extended with the Action delegates, to provide with additional functionality
     
     [Header("UI")]
     [SerializeField] private Image image;
@@ -27,7 +29,7 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         image.sprite = newItem.itemSprite;
         _currentSlot = GetComponentInParent<InventorySlot>();
     }
-
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
         image.raycastTarget = false;

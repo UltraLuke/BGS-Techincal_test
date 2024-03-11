@@ -2,6 +2,9 @@
 
 public class ShopManager : MonoBehaviour
 {
+    //This script is the one that the player access
+    //The main functionality was taken from tutorials, but extends some additional functionality such as event handling and two type of lists (buying and selling)
+    
     [SerializeField] private ShopListHandler shopList;
     [SerializeField] private ShopInventoryHandler shopInventory;
     [SerializeField] private GameObject backpackGO;

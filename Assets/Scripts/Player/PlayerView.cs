@@ -28,8 +28,6 @@ public class PlayerView : MonoBehaviour
 
     public void AddAnimator(Animator anim)
     {
-        // if (!isPlayer) return;
-        
         if (!animators.Contains(anim))
         {
             animators.Add(anim);
@@ -39,8 +37,6 @@ public class PlayerView : MonoBehaviour
 
     public void SetMovementAxes(float h, float v)
     {
-        // if (!isPlayer) return;
-
         for (int i = 0; i < animators.Count; i++)
         {
             if (animators[i] == null)
@@ -54,7 +50,8 @@ public class PlayerView : MonoBehaviour
             animators[i].SetFloat("vAxis", v);
         }
     }
-
+    
+    //Resets the animators to sync all the animations.
     private void ResetAnimations()
     {
         CheckAndRemoveNullReferences();

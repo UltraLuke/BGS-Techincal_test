@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 
 public class InventoryHandler : MonoBehaviour
 {
+    //This script is the one that the player access
+    //This script was NOT taken from tutorials.
+    
     [SerializeField] private InventoryArea _inventoryArea;
     [SerializeField] private Item[] startingItems;
     [SerializeField] private GameObject backpackIcon;

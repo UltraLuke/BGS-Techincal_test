@@ -72,7 +72,6 @@ public class CharacterOutfitHandler : MonoBehaviour
     {
         SetOutfit(outfit, ref hatOutfit, ref _currentHat, hatSpace, () =>
         {
-            //Checks if the hat overrides the hair (in case the hat and the hair don't look good together)
             if (outfit.OverridesHair && _currentHair != null)
                 _currentHair.SetActive(false);
         });

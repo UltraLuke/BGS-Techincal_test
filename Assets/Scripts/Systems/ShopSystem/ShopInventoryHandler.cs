@@ -5,6 +5,10 @@ using UnityEngine;
 
 public class ShopInventoryHandler : MonoBehaviour
 {
+    //This script manages the selling list
+    //It is similar to the ShopListHandler, but instead of getting the items from a pre-defined list, it takes from the player inventory.
+    //It was NOT taken from tutorials
+    
     [SerializeField] private ShopItem shopItemPrefab;
     [SerializeField] private Transform itemList;
     [SerializeField] private GameObject noItemsText;
@@ -32,8 +36,6 @@ public class ShopInventoryHandler : MonoBehaviour
 
     public void Initialise(IShopCustomer customer)
     {
-        // DestroyOldItems();
-        
         _shopCustomer = customer;
 
         _shopItems ??= new List<ShopItem>();
@@ -56,6 +58,7 @@ public class ShopInventoryHandler : MonoBehaviour
         }
     }
 
+    //Everytime I show this screen, I perform a refresh of the list
     public void RefreshItems()
     {
         if (_shopCustomer != null)
@@ -67,6 +70,7 @@ public class ShopInventoryHandler : MonoBehaviour
         
     }
 
+    //Destroys the current items in list before getting the new ones.
     private void DestroyOldItems()
     {
         if (_shopItems == null) return;

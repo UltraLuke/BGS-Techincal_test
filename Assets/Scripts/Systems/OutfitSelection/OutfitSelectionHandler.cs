@@ -6,6 +6,9 @@ using UnityEngine.Serialization;
 
 public class OutfitSelectionHandler : MonoBehaviour
 {
+    //This a script that I creted to test the outfit system.
+    //You can try this this in the scene "outfit_selection_demo"
+    
     [SerializeField] private CharacterOutfitHandler outfitHandler;
     [Space()]
     [SerializeField] private List<ItemOutfitBottom> bottomOutfits;
