@@ -56,10 +56,9 @@ MonoBehaviour:
   image: {fileID: 1703092821979350471}
   selectedColor: {r: 1, g: 0.9882353, b: 0, a: 1}
   notSelectedColor: {r: 0, g: 0, b: 0, a: 1}
-  onOutfitSet:
-    m_PersistentCalls:
-      m_Calls: []
   outfitType: 1
+  playerOutfitHandler: {fileID: 0}
+  inventoryOutfitHandler: {fileID: 0}
 --- !u!222 &1703092821979350470
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -118,7 +117,7 @@ MonoBehaviour:
   m_ChildAlignment: 4
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 40, y: 40}
+  m_CellSize: {x: 110, y: 110}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
