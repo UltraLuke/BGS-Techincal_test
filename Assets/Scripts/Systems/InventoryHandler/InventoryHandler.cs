@@ -27,12 +27,14 @@ public class InventoryHandler : MonoBehaviour
     {
         gameObject.SetActive(true);
         backpackIcon.SetActive(false);
+        EventsManager.TriggerEvent("EV_PAUSE_GAME");
     }
     
     public void Hide()
     {
         gameObject.SetActive(false);
         backpackIcon.SetActive(true);
+        EventsManager.TriggerEvent("EV_RESUME_GAME");
     }
 
     public bool AddItem(Item item)

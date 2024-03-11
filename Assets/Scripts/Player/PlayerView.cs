@@ -9,6 +9,15 @@ public class PlayerView : MonoBehaviour
     [SerializeField] private List<Animator> animators;
     [SerializeField] private bool isPlayer;
 
+    private void OnEnable()
+    {
+        EventsManager.SubscribeToEvent("EV_RESUME_GAME", ResetAnimations);
+    }
+    private void OnDisable()
+    {
+        EventsManager.UnsubscribeToEvent("EV_RESUME_GAME", ResetAnimations);
+    }
+    
     private void Update()
     {
         if (!isPlayer)
@@ -24,10 +33,7 @@ public class PlayerView : MonoBehaviour
         if (!animators.Contains(anim))
         {
             animators.Add(anim);
-            foreach (var a in animators)
-            {
-                a.SetTrigger("Restart");
-            }
+            ResetAnimations();
         }
     }
 
@@ -46,6 +52,28 @@ public class PlayerView : MonoBehaviour
             
             animators[i].SetFloat("hAxis", h);
             animators[i].SetFloat("vAxis", v);
+        }
+    }
+
+    private void ResetAnimations()
+    {
+        CheckAndRemoveNullReferences();
+        
+        foreach (var a in animators)
+        {
+            a.SetTrigger("Restart");
+        }
+    }
+
+    private void CheckAndRemoveNullReferences()
+    {
+        for (int i = 0; i < animators.Count; i++)
+        {
+            if (animators[i] == null)
+            {
+                animators.RemoveAt(i);
+                i--;
+            }
         }
     }
 }

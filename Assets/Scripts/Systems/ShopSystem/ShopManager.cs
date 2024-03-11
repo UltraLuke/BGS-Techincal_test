@@ -37,6 +37,7 @@ public class ShopManager : MonoBehaviour
         shopList.Initialise(TryBuyItem);
         shopInventory.Initialise(customer);
         backpackGO.SetActive(false);
+        EventsManager.TriggerEvent("EV_PAUSE_GAME");
     }
 
     public void Hide()
@@ -46,5 +47,6 @@ public class ShopManager : MonoBehaviour
         shopInventory.gameObject.SetActive(false);
         backpackGO.SetActive(true);
         gameObject.SetActive(false);
+        EventsManager.TriggerEvent("EV_RESUME_GAME");
     }
 }

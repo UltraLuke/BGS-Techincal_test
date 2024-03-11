@@ -15,19 +15,48 @@ public class PlayerController : MonoBehaviour, IShopCustomer
     
     private const float ZERO_THRESHOLD = 0.01f;
 
-    private float _lastHInput = 0;
-    private float _lastVInput = 0;
-    private float _xAnim = 0;
-    private float _yAnim = 0;
-    
+    private float _lastHInput;
+    private float _lastVInput;
+    private float _xAnim;
+    private float _yAnim;
+
+    private bool _inputBlocked;
+
+    #region Handled Events
+    private void OnEnable()
+    {
+        EventsManager.SubscribeToEvent("EV_PAUSE_GAME", StopInputCheck);
+        EventsManager.SubscribeToEvent("EV_RESUME_GAME", ResumeInputCheck);
+    }
+    private void OnDisable()
+    {
+        EventsManager.UnsubscribeToEvent("EV_PAUSE_GAME", StopInputCheck);
+        EventsManager.UnsubscribeToEvent("EV_RESUME_GAME", ResumeInputCheck);
+    }
+
+    private void StopInputCheck()
+    {
+        _inputBlocked = true;
+        Move(0, 0);
+    }
+
+    private void ResumeInputCheck()
+    {
+        _inputBlocked = false;
+    }
+
+    #endregion
+
     private void FixedUpdate()
     {
-        CheckAxes();
+        if(!_inputBlocked)
+            CheckAxes();
     }
 
     private void Update()
     {
-        CheckKeys();
+        if(!_inputBlocked)
+            CheckKeys();
     }
 
     private void CheckKeys()
